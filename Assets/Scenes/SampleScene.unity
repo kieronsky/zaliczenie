@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 204080576}
   - component: {fileID: 204080574}
   - component: {fileID: 204080580}
+  - component: {fileID: 204080581}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -151,7 +152,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204080573}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f595a039dff673742b1efa10d9786ff3, type: 3}
   m_Name: 
@@ -258,10 +259,35 @@ CharacterController:
   m_Height: 3.5
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.7, z: 0}
+--- !u!114 &204080581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204080573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d01ddb53fedbb54ba905c14f1e72476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  vertical: 0
+  moveAmount: 0
+  mouseY: 0
+  mouseX: 0
+  moveSpeed: 8
+  jumpForce: 10
+  controller: {fileID: 0}
+  gravityScale: 2
+  anim: {fileID: 1117948446}
+  pivot: {fileID: 261790591}
+  rotateSpeed: 20
+  playerModel: {fileID: 728801211}
 --- !u!1 &261790590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,38 +1287,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5460039032684469437, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
 --- !u!1 &1829962940
@@ -1393,28 +1387,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1939182132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5460039032498507486, guid: 6e4ca06b53b95c94fbf6c697ac670bf2, type: 3}
-  m_PrefabInstance: {fileID: 1786651271}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1939182134
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939182132}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a35cf3ae4e7f334a9b1adc6dad9b33c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
