@@ -8,16 +8,7 @@ public class CupPickup : MonoBehaviour
     public int value;
 
     public GameObject pickupEffect;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {

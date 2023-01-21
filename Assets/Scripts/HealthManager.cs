@@ -89,12 +89,7 @@ public class HealthManager : MonoBehaviour
 
     public void Respawn()
     {
-        
-        
-        //player.transform.position = transform.position;
-        //currentHealth = maxHealth;
-        
-        
+ 
         if (!isRespawning)
         {
             StartCoroutine("RespawnCo");
